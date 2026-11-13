@@ -25,7 +25,7 @@ def organize_data(data: np.ndarray):
     return X, y
 
 if __name__ == "__main__":
-    data_path = Path(__file__).resolve().parent / "data" / "forestfires.csv"
+    data_path = Path(__file__).resolve().parent/"data"/"forestfires.csv"
     data = np.genfromtxt(data_path, delimiter=",", dtype=str, skip_header=1)
     data = preprocess_data(data)
     data = data[np.random.default_rng(42).permutation(len(data))]
