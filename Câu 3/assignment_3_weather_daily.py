@@ -23,7 +23,7 @@ def select_features(X_train, threshold=0.8):
     return selected
 
 if __name__ == "__main__":
-    data_path = Path(__file__).resolve().parent / "data" / "weather_daily.csv"
+    data_path = Path(__file__).resolve().parent/"data"/"weather_daily.csv"
     X, y, dates, feature_names = load_weather(data_path)
 
     train_mask = (dates >= "2021-01-01") & (dates < "2025-01-01")
