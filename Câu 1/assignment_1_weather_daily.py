@@ -4,13 +4,7 @@ import numpy as np
 from linear_regression import LinearRegression
 
 def load_weather(path):
-    feature_columns = [
-        "temperature_2m_max",
-        "temperature_2m_min",
-        "temperature_2m_mean",
-        "sunshine_duration",
-        "wind_speed_10m_max",
-    ]
+    feature_columns = ["temperature_2m_max","temperature_2m_min","temperature_2m_mean","sunshine_duration","wind_speed_10m_max",]
     with path.open(encoding="utf-8-sig", newline="") as file:
         rows = list(csv.DictReader(file))
 
